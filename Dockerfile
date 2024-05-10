@@ -1,5 +1,5 @@
 ARG PG_MAJOR=16
-FROM postgres:$PG_MAJOR
+FROM postgres:16
 ARG PG_MAJOR
 
 COPY . /tmp/pgvector
