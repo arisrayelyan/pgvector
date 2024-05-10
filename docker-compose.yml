@@ -1,0 +1,17 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+services:
+  dbvector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: embedDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - embedDb:/var/lib/postgresql/data
+volumes:
+  embedDb:
