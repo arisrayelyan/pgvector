@@ -1,4 +1,6 @@
-# pgvector
+# pgvector (V0.7.0)
+
+Fork purpose: Added docker-compose file for easy setup, and changed master branch to use v0.7.0 release.
 
 Open-source vector similarity search for Postgres
 
@@ -15,13 +17,22 @@ Plus [ACID](https://en.wikipedia.org/wiki/ACID) compliance, point-in-time recove
 
 ## Installation
 
+### Docker
+Before running the container, make sure that 5432 port is available on your machine.
+
+```sh
+git clone https://github.com/arisrayelyan/pgvector.git
+cd pgvector
+docker-compose up -d
+```
+
 ### Linux and Mac
 
 Compile and install the extension (supports Postgres 12+)
 
 ```sh
 cd /tmp
-git clone --branch v0.7.0 https://github.com/pgvector/pgvector.git
+git clone https://github.com/arisrayelyan/pgvector.git
 cd pgvector
 make
 make install # may need sudo
