@@ -12,6 +12,6 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - embedDb:/var/lib/postgresql/data
+      - pgVectorData:/var/lib/postgresql/data
 volumes:
-  embedDb:
+  pgVectorData:
